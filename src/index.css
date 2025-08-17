@@ -1,0 +1,178 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Fonts from Framer inspiration */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    color: rgb(55, 65, 81);
+    /* gray-600 from inspiration */
+    min-height: 100vh;
+}
+
+/* Custom Utilities */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Navbar Styles */
+.navbar-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-link {
+    position: relative;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: rgb(37, 99, 235);
+    /* blue-600 pour l'harmonie */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* Custom Animations for Scrolling Questions */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right-slow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.animate-scroll-right {
+    animation: scroll-right 40s linear infinite;
+}
+
+.animate-scroll-left {
+    animation: scroll-left 35s linear infinite;
+}
+
+.animate-scroll-right-slow {
+    animation: scroll-right-slow 45s linear infinite;
+}
+
+/* FranceGPT Experience Scrolling Animation */
+@keyframes francegpt-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-francegpt-scroll {
+    animation: francegpt-scroll 30s linear infinite;
+}
+
+/* ValueSection line animation */
+@keyframes fadeInLine {
+    from {
+        opacity: 0;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        opacity: 0.8;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+textarea {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Focus styles with inspiration colors */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid rgb(37, 99, 235);
+    /* blue-600 pour l'harmonie */
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar with inspiration colors */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(240, 249, 255);
+    /* fond bleu très clair */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(191, 219, 254);
+    /* blue-200 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(147, 197, 253);
+    /* blue-300 */
+}
