@@ -73,9 +73,20 @@ const ScrollingQuestionsSection = () => {
     };
 
     return (
-        <section className="py-16 overflow-hidden" style={{
+        <section className="py-20 pb-32 overflow-hidden" style={{
             backgroundColor: '#FFFBF7'
         }}>
+            {/* Section Title */}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                <div className="text-center max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-gray-800 mb-6">
+                        What plot will you ask next?
+                    </h2>
+                    <p className="text-xl text-gray-600 leading-relaxed">
+                        A Glimpse into Past Studies. Your Next Research Starts Here.
+                    </p>
+                </div>
+            </div>
             {/* Desktop Version - Keep original scrolling animation */}
             <div className="hidden md:block space-y-6">
                 {/* Row 1 - Scrolls from left to right */}
