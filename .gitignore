@@ -171,5 +171,108 @@ coverage/
 # Storybook build outputs
 storybook-static
 
+# React specific
+# See https://facebook.github.io/create-react-app/docs/deployment for more information.
+/build
+
+# React testing
+/coverage
+
+# React production build
+/build
+
+# React misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Tailwind CSS
+# Tailwind CSS cache and generated files
+.tailwindcss-cache/
+*.css.map
+
+# PostCSS
+postcss.config.js.bak
+
+# Webpack
+.webpack/
+
+# Bundle analyzer
+bundle-analyzer-report.html
+
+# Sentry
+.sentryclirc
+
+# Local Netlify folder
+.netlify
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify/
+
+# Surge
+.surge/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
 # Optional: Uncomment if you want to ignore package-lock.json (not recommended for production)
-# package-lock.json 
+# package-lock.json
+
+# Yarn 2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Turbo
+.turbo
+
+# Vite
+dist-ssr
+*.local
+
+# Rollup
+rollup.config.js.bak
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# Husky
+.husky/
+
+# Lint-staged
+.lint-staged.js
+
+# Commitlint
+.commitlintrc.js
+
+# Conventional Changelog
+CHANGELOG.md
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Temporary files
+*.tmp
+*.temp 
