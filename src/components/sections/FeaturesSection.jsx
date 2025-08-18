@@ -47,7 +47,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0, image }) => {
             ref={cardRef}
             className={`group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
-            style={{ minHeight: '520px' }}
+            style={{ height: '400px' }}
         >
             {/* Image de fond */}
             <div
@@ -67,20 +67,8 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0, image }) => {
                 )}
             </div>
 
-            {/* Overlay et contenu */}
-            <div className="relative h-full flex flex-col justify-start min-h-[520px]">
-                {/* Overlay sombre en haut pour la lisibilité */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"></div>
-
-                {/* Contenu textuel en haut avec hauteurs fixes pour alignement */}
-                <div className="relative px-8 pt-6 pb-8 flex flex-col">
-                    <h3 className="text-base font-display font-semibold text-white mb-3 h-8 flex items-start leading-tight">
-                        {title}
-                    </h3>
-                    <p className="text-white/90 leading-relaxed font-sans text-sm min-h-[90px] flex items-start">
-                        {description}
-                    </p>
-                </div>
+            {/* Pas de contenu textuel - seulement l'image */}
+            <div className="relative h-full">
             </div>
         </div>
     );
@@ -90,31 +78,31 @@ const FeaturesSection = () => {
     const features = [
         {
             icon: UserGroupIcon,
-            title: "Digital Twins",
-            description: "Create digital twins that mimic the behavior, preferences, and opinions of your target audience with training data.",
-            image: "/images/illustr1.jpg"
+            title: "",
+            description: "",
+            image: "/images/Twin.png"
         },
         {
             icon: ClockIcon,
-            title: "Real-time interrogation",
-            description: "Submit your survey to your AI panel of digital twins. Access hard-to-reach audiences and cut research delays.",
-            image: "/images/illustr2.jpg"
+            title: "",
+            description: "",
+            image: "/images/tete.png"
         },
         {
             icon: ChartBarIcon,
-            title: "Data Visualization & Extraction",
-            description: "Analyze results directly on our platform with intuitive visualization tools or extract the data in your format of choice.",
-            image: "/images/histo1.jpg"
+            title: "",
+            description: "",
+            image: "/images/graph.png"
         }
     ];
 
     return (
-        <section className="relative py-6" style={{
+        <section className="relative py-3" style={{
             backgroundColor: '#FFF8ED'
         }}>
             {/* Contenu principal avec fond uni */}
             <div className="relative z-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
                     {/* Features Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {features.map((feature, index) => (
