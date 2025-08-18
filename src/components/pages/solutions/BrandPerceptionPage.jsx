@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BasePage from '../BasePage';
+import { ChartBarIcon, ScaleIcon, ShieldCheckIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
 
 const BrandPerceptionPage = () => {
     return (
         <BasePage>
-            <section className="relative h-[36rem] overflow-hidden -mt-16" style={{
+            <section className="relative h-[40rem] overflow-hidden -mt-16" style={{
                 backgroundColor: 'transparent',
                 backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
                 backgroundSize: '24px 24px'
@@ -30,12 +31,12 @@ const BrandPerceptionPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-0">
+                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[#194471] leading-tight mb-6">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[#194471] leading-tight mb-8">
                             Brand Perception & Satisfaction
                         </h1>
-                        <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-8">
+                        <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-10">
                             Always-On Brand Health Tracking with AI-Powered Perception Analysis
                         </p>
                         <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed font-sans mb-8">
@@ -45,20 +46,37 @@ const BrandPerceptionPage = () => {
                 </div>
 
                 {/* Bottom Fade - jonction dégradée vers la section suivante */}
-                <div className="absolute bottom-0 left-0 right-0 h-80 z-30 pointer-events-none"
+                <div className="absolute bottom-0 left-0 right-0 h-1 z-30 pointer-events-none"
                     style={{
-                        background: 'linear-gradient(to bottom, transparent 0%, #FFF4E6 100%)'
+                        background: 'linear-gradient(to bottom, transparent 0%, #FFFDF8 100%)'
                     }}
                 ></div>
             </section>
 
-            <section className="pt-2 pb-20" style={{
-                backgroundColor: '#FFF4E6',
-                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.1) 1px, transparent 1px)',
+            {/* Image Section */}
+            <section className="-mt-20 pb-16 relative z-30" style={{
+                backgroundColor: '#FFFDF8',
+                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.05) 1px, transparent 1px)',
+                backgroundSize: '22px 22px'
+            }}>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+                    <div className="w-full mb-12">
+                        <img
+                            src="/images/brand perception.png"
+                            alt="Brand Perception"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section className="pb-16 relative z-30" style={{
+                backgroundColor: '#FFFDF8',
+                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.05) 1px, transparent 1px)',
                 backgroundSize: '22px 22px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
+                    <div className="text-center mb-20">
                         <h2 className="text-3xl sm:text-4xl font-display font-semibold text-gray-800 mb-4">
                             Key Benefits
                         </h2>
@@ -67,53 +85,69 @@ const BrandPerceptionPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-8 h-8 bg-[#194471] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                1
+                    <div className="max-w-4xl mx-auto space-y-20">
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ChartBarIcon className="w-6 h-6 text-white" />
+                                </div>
                             </div>
-                            <h3 className="text-xl font-display font-semibold text-gray-800 mb-4">
-                                Real-time Brand Pulse
-                            </h3>
-                            <p className="text-gray-500 font-sans leading-relaxed">
-                                Track satisfaction shifts and perception trends as they emerge, across any audience segment.
-                            </p>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Real-time Brand Pulse
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Track satisfaction shifts and perception trends as they emerge, across any audience segment.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="text-center">
-                            <div className="w-8 h-8 bg-[#194471] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                2
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ScaleIcon className="w-6 h-6 text-white" />
+                                </div>
                             </div>
-                            <h3 className="text-xl font-display font-semibold text-gray-800 mb-4">
-                                Unlimited Competitive Benchmarking
-                            </h3>
-                            <p className="text-gray-500 font-sans leading-relaxed">
-                                Test your brand against any number of competitors simultaneously.
-                            </p>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Unlimited Competitive Benchmarking
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Test your brand against any number of competitors simultaneously.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="text-center">
-                            <div className="w-8 h-8 bg-[#194471] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                3
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                                </div>
                             </div>
-                            <h3 className="text-xl font-display font-semibold text-gray-800 mb-4">
-                                Zero-risk Sensitivity Testing
-                            </h3>
-                            <p className="text-gray-500 font-sans leading-relaxed">
-                                Safely gauge reactions to controversies, rebrands, or crises without exposing your strategy.
-                            </p>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Zero-risk Sensitivity Testing
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Safely gauge reactions to controversies, rebrands, or crises without exposing your strategy.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="text-center">
-                            <div className="w-8 h-8 bg-[#194471] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                4
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ArrowTrendingUpIcon className="w-6 h-6 text-white" />
+                                </div>
                             </div>
-                            <h3 className="text-xl font-display font-semibold text-gray-800 mb-4">
-                                Predictive Loyalty Mapping
-                            </h3>
-                            <p className="text-gray-500 font-sans leading-relaxed">
-                                Identify hidden drivers of advocacy and churn before they impact revenue.
-                            </p>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Predictive Loyalty Mapping
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Identify hidden drivers of advocacy and churn before they impact revenue.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

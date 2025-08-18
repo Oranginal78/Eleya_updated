@@ -47,29 +47,22 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0, image }) => {
             ref={cardRef}
             className={`group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
-            style={{ height: '400px' }}
+            style={{ aspectRatio: '3/4' }}
         >
-            {/* Image de fond */}
-            <div
-                className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
-                style={{
-                    backgroundImage: (image && imageLoaded && !imageError) ? `url(${image})` : 'none',
-                    backgroundColor: '#f8fafc'
-                }}
-            >
-                {/* Fallback icon si pas d'image ou erreur */}
-                {(!image || !imageLoaded || imageError) && (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
-                        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                            <Icon className="w-8 h-8 text-blue-500" />
-                        </div>
+            {/* Image */}
+            {image && imageLoaded && !imageError ? (
+                <img
+                    src={image}
+                    alt="Feature"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+            ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                        <Icon className="w-8 h-8 text-blue-500" />
                     </div>
-                )}
-            </div>
-
-            {/* Pas de contenu textuel - seulement l'image */}
-            <div className="relative h-full">
-            </div>
+                </div>
+            )}
         </div>
     );
 };
