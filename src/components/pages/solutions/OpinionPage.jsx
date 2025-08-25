@@ -53,13 +53,30 @@ const OpinionPage = () => {
                 ></div>
             </section>
 
-            <section className="pt-20 pb-16 relative z-30" style={{
+            {/* Image Section */}
+            <section className="-mt-20 pb-16 relative z-30" style={{
+                backgroundColor: '#FFFDF8',
+                backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.05) 1px, transparent 1px)',
+                backgroundSize: '22px 22px'
+            }}>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+                    <div className="w-full mb-12">
+                        <img
+                            src="/images/opinion1.png"
+                            alt="Opinion & Sentiment Analysis"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section className="pb-16 relative z-30" style={{
                 backgroundColor: '#FFFDF8',
                 backgroundImage: 'radial-gradient(rgba(254, 200, 162, 0.05) 1px, transparent 1px)',
                 backgroundSize: '22px 22px'
             }}>
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-48">
+                    <div className="text-center mb-20">
                         <h2 className="text-3xl sm:text-4xl font-display font-semibold text-gray-800 mb-4">
                             Key Benefits
                         </h2>
@@ -68,92 +85,68 @@ const OpinionPage = () => {
                         </p>
                     </div>
 
-                    <div className="max-w-7xl mx-auto">
-                        <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
-                            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-                                {/* Colonne gauche avec les bénéfices */}
-                                <div className="lg:col-span-3 space-y-6">
-                                    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center shadow-sm border border-gray-200">
-                                                <ChatBubbleLeftRightIcon className="w-4 h-4 text-white" />
-                                            </div>
-                                        </div>
-                                        <div className="text-center lg:text-left">
-                                            <h3 className="text-lg font-display font-semibold text-gray-800 mb-1">
-                                                Real-time Sentiment Tracking
-                                            </h3>
-                                            <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                                                Monitor public opinion shifts as they happen across any topic or demographic.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="border-t border-gray-100 pt-6">
-                                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                                            <div className="flex-shrink-0">
-                                                <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center shadow-sm border border-gray-200">
-                                                    <ClockIcon className="w-4 h-4 text-white" />
-                                                </div>
-                                            </div>
-                                            <div className="text-center lg:text-left">
-                                                <h3 className="text-lg font-display font-semibold text-gray-800 mb-1">
-                                                    Continuous Monitoring
-                                                </h3>
-                                                <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                                                    Track opinion trends over time without manual intervention.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="border-t border-gray-100 pt-6">
-                                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                                            <div className="flex-shrink-0">
-                                                <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center shadow-sm border border-gray-200">
-                                                    <ShieldExclamationIcon className="w-4 h-4 text-white" />
-                                                </div>
-                                            </div>
-                                            <div className="text-center lg:text-left">
-                                                <h3 className="text-lg font-display font-semibold text-gray-800 mb-1">
-                                                    Crisis Detection
-                                                </h3>
-                                                <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                                                    Identify potential reputation risks before they escalate.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="border-t border-gray-100 pt-6">
-                                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
-                                            <div className="flex-shrink-0">
-                                                <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center shadow-sm border border-gray-200">
-                                                    <EyeIcon className="w-4 h-4 text-white" />
-                                                </div>
-                                            </div>
-                                            <div className="text-center lg:text-left">
-                                                <h3 className="text-lg font-display font-semibold text-gray-800 mb-1">
-                                                    Granular Insights
-                                                </h3>
-                                                <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                                                    Understand sentiment drivers across different audience segments.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div className="max-w-4xl mx-auto space-y-20">
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ChatBubbleLeftRightIcon className="w-6 h-6 text-white" />
                                 </div>
+                            </div>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Real-time Sentiment Tracking
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Monitor public opinion shifts as they happen across any topic or demographic.
+                                </p>
+                            </div>
+                        </div>
 
-                                {/* Colonne droite avec l'image */}
-                                <div className="lg:col-span-2">
-                                    <div className="h-full flex items-center">
-                                        <img
-                                            src="/images/opinion.png"
-                                            alt="Opinion & Sentiment Analysis"
-                                            className="w-full h-auto rounded-xl shadow-lg"
-                                        />
-                                    </div>
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ClockIcon className="w-6 h-6 text-white" />
                                 </div>
+                            </div>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Continuous Monitoring
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Track opinion trends over time without manual intervention.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <ShieldExclamationIcon className="w-6 h-6 text-white" />
+                                </div>
+                            </div>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Crisis Detection
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Identify potential reputation risks before they escalate.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div className="flex-shrink-0">
+                                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                                    <EyeIcon className="w-6 h-6 text-white" />
+                                </div>
+                            </div>
+                            <div className="text-center lg:text-left">
+                                <h3 className="text-2xl font-display font-semibold text-gray-800 mb-4">
+                                    Granular Insights
+                                </h3>
+                                <p className="text-gray-600 font-sans leading-relaxed text-lg">
+                                    Understand sentiment drivers across different audience segments.
+                                </p>
                             </div>
                         </div>
                     </div>
