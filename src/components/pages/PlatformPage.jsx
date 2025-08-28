@@ -48,10 +48,16 @@ const PlatformPage = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto">
                         <div className={`mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-gray-800 leading-tight mb-6">
+                            <h1 className="font-display font-semibold text-gray-800 leading-tight mb-6" style={{
+                                fontSize: 'clamp(1.75rem, 7vw, 4.5rem)',
+                                lineHeight: 1.15
+                            }}>
                                 The first and most trusted AI platform for analytics
                             </h1>
-                            <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed font-sans">
+                            <p className="text-gray-500 max-w-3xl mx-auto leading-relaxed font-sans" style={{
+                                fontSize: 'clamp(1.125rem, 4.5vw, 1.25rem)',
+                                lineHeight: 1.4
+                            }}>
                                 Generate near-real augmented insights and unlock granular analytics in every survey.
                             </p>
                         </div>

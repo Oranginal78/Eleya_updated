@@ -14,7 +14,7 @@ const FranceGPTPage = () => {
     return (
         <BasePage>
             {/* Hero Section - Same background as landing page */}
-            <section className="relative min-h-screen overflow-hidden -mt-16" style={{
+            <section className="francegpt-hero relative min-h-screen md:min-h-screen overflow-visible -mt-16" style={{
                 backgroundColor: 'transparent',
                 backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
                 backgroundSize: '24px 24px'
@@ -39,7 +39,7 @@ const FranceGPTPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-0">
+                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-48 pb-8 md:pb-0">
                     <div className={`text-center max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 bg-[#194471]/10 text-[#194471] px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -48,28 +48,50 @@ const FranceGPTPage = () => {
                         </div>
 
                         {/* Main Title */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-gray-800 leading-tight mb-8">
+                        <h1 className="font-display font-semibold text-gray-800 leading-tight mb-8" style={{
+                            fontSize: 'clamp(1.75rem, 8vw, 4.5rem)',
+                            lineHeight: 1.15
+                        }}>
                             <span className="text-[#194471]">The French population</span>
                             <br />
                             <span className="text-gray-700">in your pocket</span>
                         </h1>
 
                         {/* Subtitle */}
-                        <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-sans mb-8">
+                        <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed font-sans mb-8" style={{
+                            fontSize: 'clamp(1rem, 4.5vw, 1.5rem)',
+                            lineHeight: 1.35
+                        }}>
                             What if you could chat with an entire population at once?
                             <span className="block mt-2 font-semibold text-[#194471]">Discover FranceGPT!</span>
                         </p>
 
                         {/* Description */}
-                        <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed font-sans mb-12">
+                        <p className="text-gray-500 max-w-3xl mx-auto leading-relaxed font-sans mb-8 md:mb-12" style={{
+                            fontSize: 'clamp(0.9375rem, 4vw, 1.125rem)',
+                            lineHeight: 1.5,
+                            wordBreak: 'normal',
+                            overflowWrap: 'anywhere'
+                        }}>
                             FranceGPT is the first AI-powered simulation of the French population, crafted to mirror
                             the diversity, habits, and decision-making of real people.
                         </p>
+
+                        {/* CTA Button - Integrated in content flow for mobile */}
+                        <div className="block md:hidden mb-8">
+                            <Link
+                                to="/francegpt/experience"
+                                className="inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                            >
+                                Try FranceGPT
+                                <ArrowRightIcon className="w-5 h-5" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
-                {/* CTA Button - Separate layer */}
-                <div className="absolute bottom-20 left-0 right-0 z-40 flex justify-center">
+                {/* CTA Button - Separate layer for desktop only */}
+                <div className="hidden md:flex absolute bottom-20 left-0 right-0 z-40 justify-center">
                     <Link
                         to="/francegpt/experience"
                         className="inline-flex items-center gap-3 bg-[#194471] hover:bg-[#194471]/90 text-white px-8 py-4 rounded-lg font-display font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"

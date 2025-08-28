@@ -314,7 +314,7 @@ const EleyaTwinPage = () => {
 
     return (
         <BasePage>
-            <section className="relative h-[36rem] overflow-hidden -mt-16" style={{
+            <section className="hero-intro relative min-h-[36rem] md:h-[36rem] overflow-visible -mt-16" style={{
                 backgroundColor: 'transparent',
                 backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
                 backgroundSize: '24px 24px'
@@ -339,15 +339,26 @@ const EleyaTwinPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-0">
+                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-40 pb-8 md:pb-0">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[#194471] leading-tight mb-6">
+                        <h1 className="font-display font-semibold text-[#194471] leading-tight mb-6" style={{
+                            fontSize: 'clamp(2rem, 8vw, 4.5rem)',
+                            lineHeight: 1.15
+                        }}>
                             EleyaTwin
                         </h1>
-                        <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-8">
+                        <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-8" style={{
+                            fontSize: 'clamp(1.125rem, 4.5vw, 1.25rem)',
+                            lineHeight: 1.4
+                        }}>
                             EleyaTwin is an AI-powered research platform. Our customers conduct their surveys on Digital Twins of their target population on EleyaTwin.
                         </p>
-                        <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed font-sans mb-8">
+                        <p className="text-gray-800 max-w-3xl mx-auto leading-relaxed font-sans mb-8" style={{
+                            fontSize: 'clamp(1rem, 4vw, 1.125rem)',
+                            lineHeight: 1.5,
+                            wordBreak: 'normal',
+                            overflowWrap: 'anywhere'
+                        }}>
                             Augment your survey data with AI to multiply insights and boost your customer understanding to deliver them more value.
                         </p>
                     </div>
@@ -453,13 +464,13 @@ const EleyaTwinPage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <BarChart
                             data={surveyAccuracyData}
-                            question="How accurate do you find AI-generated survey responses compared to traditional methods?"
+                            question="How accurate is the battery life prediction on your smartphone or laptop?"
                             isAnimated={true}
                             delay={200}
                         />
                         <StackedBarChart
                             data={aiTrustData}
-                            question="How much do you trust AI-powered research platforms for decision making?"
+                            question="How much do you trust AI-powered wearables to accurately monitor and alert you to potential health issues?"
                             delay={400}
                         />
                     </div>

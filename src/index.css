@@ -176,3 +176,75 @@ textarea:focus {
     background: rgb(147, 197, 253);
     /* blue-300 */
 }
+
+/* Mobile Responsive Hero Sections Fix */
+.hero-intro,
+.francegpt-hero {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Ensure decorative elements don't mask content */
+.hero-intro::before,
+.hero-intro::after,
+.hero-intro .absolute,
+.francegpt-hero::before,
+.francegpt-hero::after,
+.francegpt-hero .absolute {
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-intro .relative,
+.francegpt-hero .relative {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile-specific spacing and typography safety */
+@media (max-width: 768px) {
+
+    .hero-intro,
+    .francegpt-hero {
+        padding-top: 4rem !important;
+        /* 64px - éviter le chevauchement sous la navbar */
+        padding-bottom: 3rem !important;
+        /* 48px - empêcher le clipping bas */
+        min-height: auto !important;
+    }
+
+    /* Ensure sections don't overlap */
+    section {
+        margin-top: 1.5rem;
+    }
+
+    /* Typography safety on mobile */
+    .hero-intro h1,
+    .francegpt-hero h1 {
+        font-size: clamp(1.75rem, 7vw, 4.5rem) !important;
+        line-height: 1.15 !important;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-intro p,
+    .francegpt-hero p {
+        font-size: clamp(0.9375rem, 4vw, 1.25rem) !important;
+        line-height: 1.5 !important;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    /* Prevent text truncation on very small screens */
+    @media (max-width: 390px) {
+
+        .hero-intro,
+        .francegpt-hero {
+            padding-top: 5rem !important;
+            /* 80px - extra space for very small screens */
+            padding-bottom: 4rem !important;
+            /* 64px - extra bottom padding */
+        }
+    }
+}

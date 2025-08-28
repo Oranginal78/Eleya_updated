@@ -6,7 +6,7 @@ import { BoltIcon, MagnifyingGlassIcon, UserGroupIcon, AcademicCapIcon } from '@
 const SegmentationUAPage = () => {
     return (
         <BasePage>
-            <section className="relative h-[40rem] overflow-hidden -mt-16" style={{
+            <section className="hero-intro relative min-h-[40rem] md:h-[40rem] overflow-visible -mt-16" style={{
                 backgroundColor: 'transparent',
                 backgroundImage: 'radial-gradient(rgba(254, 195, 147, 0.5) 1px, transparent 1px)',
                 backgroundSize: '24px 24px'
@@ -31,15 +31,26 @@ const SegmentationUAPage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+                <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-8 md:pb-16">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[#194471] leading-tight mb-8">
+                        <h1 className="font-display font-semibold text-[#194471] leading-tight mb-8" style={{
+                            fontSize: 'clamp(1.75rem, 7vw, 4.5rem)',
+                            lineHeight: 1.15
+                        }}>
                             Segmentation & U&A
                         </h1>
-                        <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-10">
+                        <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans mb-10" style={{
+                            fontSize: 'clamp(1.125rem, 4.5vw, 1.25rem)',
+                            lineHeight: 1.4
+                        }}>
                             Dynamic Consumer Insights with AI-Powered Digital Twins
                         </p>
-                        <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed font-sans mb-8">
+                        <p className="text-gray-800 max-w-3xl mx-auto leading-relaxed font-sans mb-8" style={{
+                            fontSize: 'clamp(0.9375rem, 4vw, 1.125rem)',
+                            lineHeight: 1.5,
+                            wordBreak: 'normal',
+                            overflowWrap: 'anywhere'
+                        }}>
                             Discover how products integrate into daily lives and segment customers with an unprecedented precision. Combining U&A and segmentation studies with digital twins creates a powerful feedback loop for strategy. Continuously monitor segment-specific usage patterns to refine positioning, identify unmet needs, or uncover whitespace opportunities.
                         </p>
                     </div>
